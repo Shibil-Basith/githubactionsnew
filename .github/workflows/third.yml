@@ -1,0 +1,14 @@
+name: Third workflow
+on: 
+  push:
+  schedule:
+    - cron: 0 0 * * *
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      NAME: Shibil
+    steps:
+      - name: print env
+        run: echo $NAME
+    
